@@ -30,7 +30,7 @@ public class TeamsServiceImpl implements TeamsService {
 
     @Override
     @Async("asyncExecutor")
-    public CompletableFuture<Void> sendChannelNotification(NotificationRequestDto request) {
+    public void sendChannelNotification(NotificationRequestDto request) {
         try {
             log.info("Sending channel notification with payload: {}", request);
             ObjectNode payload = buildTeamsRequest(request);
@@ -39,7 +39,6 @@ public class TeamsServiceImpl implements TeamsService {
         } catch(WebClientResponseException e) {
             log.error("Error sending channel notification: {}", e.getMessage(), e);
         }
-        return CompletableFuture.completedFuture(null);
     }
 
     private void sendMessage(ObjectNode payload) {
