@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 import tools.jackson.databind.ObjectMapper;
 import tools.jackson.databind.node.ArrayNode;
@@ -26,7 +27,7 @@ public class TeamsServiceImpl implements TeamsService {
 
     private final ObjectMapper objectMapper;
 
-    private final WebClientConfig webClientConfig;
+    private final WebClient webClient;
 
     @Override
     @Async("asyncExecutor")
@@ -43,7 +44,7 @@ public class TeamsServiceImpl implements TeamsService {
 
     private void sendMessage(ObjectNode payload) {
         URI uri = URI.create(teamsChannelProperties.webhookUrl());
-        webClientConfig.webClient().post()
+        webClient.post()
                 .uri(uri)
                 .bodyValue(payload)
                 .retrieve()
