@@ -1,6 +1,5 @@
 package com.anish.teams.service.impl;
 
-import com.anish.teams.config.WebClientConfig;
 import com.anish.teams.config.properties.TeamsChannelProperties;
 import com.anish.teams.dto.NotificationRequestDto;
 import com.anish.teams.service.TeamsService;
@@ -16,7 +15,6 @@ import tools.jackson.databind.node.ArrayNode;
 import tools.jackson.databind.node.ObjectNode;
 
 import java.net.URI;
-import java.util.concurrent.CompletableFuture;
 
 @Service
 @Slf4j
