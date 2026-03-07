@@ -45,7 +45,7 @@ export TEAMS_WEBHOOK_URL="${YOUR_TEAMS_WEBHOOK_URL}"
 #### Steps
 ```bash
 # Clone the repo
-git clone -b main https://github.com/anish-anantharaman/teams-channel-webhook-service.git
+git clone -b main https://github.com/anish-anantharaman/teams-notification-service.git
 
 # Build the project
 mvn clean install
