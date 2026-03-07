@@ -79,7 +79,7 @@ This is useful if you want to start the service quickly without installing Java 
 Once the service is running, you can send a test notification using the curl provide below:
 
 ```bash
-curl --location 'http://localhost:8085/api/v1/notifications' \
+curl --location 'http://localhost:8080/api/v1/notifications' \
 --header 'Content-Type: application/json' \
 --data '{
     "title": "Title",
@@ -94,7 +94,7 @@ curl --location 'http://localhost:8085/api/v1/notifications' \
 
 Once the application is running, open your browser to:
 
-[Swagger UI - Send Channel Notification](http://localhost:8085/swagger-ui/index.html#/Notifications/sendChannelNotification)
+[Swagger UI - Send Channel Notification](http://localhost:8080/swagger-ui/index.html#/Notifications/sendChannelNotification)
 <br />
 <br />
 
