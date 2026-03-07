@@ -68,7 +68,7 @@ For a quick start without building locally, you can use Docker. No tests are inc
 docker build -t teams-notification-service .
 
 # Run the container with the webhook URL
-docker run -e TEAMS_WEBHOOK_URL="${YOUR_TEAMS_WEBHOOK_URL}" -p 8085:8085 teams-notification-service
+docker run -e TEAMS_WEBHOOK_URL="${YOUR_TEAMS_WEBHOOK_URL}" -p 8080:8080 teams-notification-service
 
 ```
 
