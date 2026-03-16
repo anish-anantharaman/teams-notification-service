@@ -24,7 +24,7 @@ automatically generate Swagger documentation.
 
 ## Getting Started
 
-⚠️ Note: You need to create an incoming webhook in Microsoft Teams to get the URL above.
+⚠️ Note: You need to create an incoming webhook in Microsoft Teams to get started.
 Follow the instructions here: [Creating an Incoming Webhook in Teams](docs/CREATE_TEAMS_WEBHOOK.md)
 
 ### 1. Running Locally
